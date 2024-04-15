@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>채팅내역</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>채팅 내용</th>
+    </tr>
+    <tr th:each="chatDTO : ${chatList}">
+        <td>[[${chatDTO.message}]]</td>  </tr>
+</table>
+</body>
+</html>

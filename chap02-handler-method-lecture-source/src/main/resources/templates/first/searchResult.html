@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Model(view 에서 사용할 서버 측 정보) 에 답긴 커멘드 객체의 정보 출력</h1>
+<h3 th:text="|메뉴의 이름 : ${menuDTO.name}|"></h3>
+<h3 th:text="|메뉴의 가격 : ${menuDTO.price}|"></h3>
+<h3 th:text="|메뉴의 카테고리 : ${menuDTO.categoryCode}|"></h3>
+<h3 th:text="|메뉴의 판매상태 : ${menuDTO.orderableStatus}|"></h3>
+</body>
+</html>
