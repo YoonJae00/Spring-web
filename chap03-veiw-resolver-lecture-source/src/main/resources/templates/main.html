@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>뷰 리졸버를 이용한 뷰 연결하기</h1>
+    <pre>
+        핸들러 메소드가 요청을 처리하고 논리 뷰 이름을 반환하면 DispatcherServlet 은
+        화면에서 데이터를 표시하도록 뷰 템플릿에 제어권을 넘긴다.
+        Spring MVC 에서는 다양한 전략에 맞게 뷰를 해석할 수 있는 ViewResolver 구현체가
+        있다.
+        기본적으로 사용하고 있는 뷰 리졸버는 InternalResourcesViewResolver 가 있다.
+        하지만 이는 내부 리소스 jsp 또는 서블릿만 해석이 가능하기 때문에
+        다른 뷰 템플릿을 사용하는 경우에는 다른 ViewResolver 를 사용해야 한다.
+        그래서 우리는 ThymeleafViewResolver 를 사용하고 있다.
+        prefix 로 "resource/templates/", suffix 로 ".html" 을 붙여준다.
+    </pre>
+
+    <h3>문자열로 뷰 이름 반환하기</h3>
+    <button onclick="location.href='string'">문자열로 뷰 이름 반환</button>
+    <hr>
+    <h3>문자열로 redirect 하기</h3>
+    <button onclick="location.href='string-redirect'">문자열로 뷰 이름 반환하여 리다이렉트</button>
+    <hr>
+    <h3>문자열로 뷰 이름 반환하면서 flashAttribute 추가하기</h3>
+    <button onclick="location.href='string-redirect-attribute'">문자열로 뷰 이름 반환하여 리다이렉트 & flashAttr 사용하기</button>
+    <script>
+        const flashMessage1 = `[[${flashMessage1}]]`;
+        console.log(flashMessage1);
+        if(flashMessage1) {
+            alert(flashMessage1);
+        }
+    </script>
+    <hr>
+    <h3>ModelAndView 로 뷰 이름 지정해서 반환하기</h3>
+    <button onclick="location.href='modelandview'">modelandview 로 이름 지정해서 반환하기</button>
+
+    <h3>ModelAndView 로 뷰 이름 지정해서 반환하기 + 리다이렉트</h3>
+    <button onclick="location.href='modelandview-redirect'">modelandview 리다이렉트</button>
+    <hr>
+    <h3>ModelAndView 로 뷰 이름 반환하면서 flashAttribute 추가 해보기~</h3>
+    <button onclick="location.href='modelandview-redirect-attr'">ModelAndView 로 이름 반환하여 리다이렉트</button>
+    <script>
+        const flashMessage2 = `[[${flashMessage2}]]`;
+        console.log(flashMessage2);
+        if(flashMessage2) {
+            alert(flashMessage2);
+        }
+    </script>
+</body>
+</html>
