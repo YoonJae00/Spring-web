@@ -109,12 +109,11 @@ public class FirstController {
 //        return "first/showChatting";
 //    }
 
-    @GetMapping("showMoney")
+    @GetMapping("showmoney")
     public void showmoney() {}
 
     @GetMapping("/showmethemoney")
     public String showmethemoney(Model model) {
-
 
         model.addAttribute("message","<h1> ㅎ2ㅎ22ㅎ2ㅎ2ㅎ2 </h2>");
 
