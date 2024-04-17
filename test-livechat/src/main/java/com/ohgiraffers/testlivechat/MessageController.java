@@ -1,7 +1,5 @@
 package com.ohgiraffers.testlivechat;
 
-
-
 import jakarta.websocket.OnMessage;
 import jakarta.websocket.OnOpen;
 import jakarta.websocket.Session;
