@@ -24,6 +24,7 @@ public class StopWatchInterceptor implements HandlerInterceptor {
 
         long startTime = System.currentTimeMillis();
 
+
         request.setAttribute("startTime", startTime);
 
         // true 이면 컨트롤러를 이어서 호출하기 한다. false 면 핸들러 메소드를 호출하지 않는다.
@@ -39,6 +40,7 @@ public class StopWatchInterceptor implements HandlerInterceptor {
         long startTime = (long) request.getAttribute("startTime");
 
         long endTime = System.currentTimeMillis();
+
 
         modelAndView.addObject("interval", endTime - startTime);
     }

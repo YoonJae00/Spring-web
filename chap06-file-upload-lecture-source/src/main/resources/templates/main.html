@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MainPage</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: darkslateblue">파일 업로드 해보기</h1>
+    <hr>
+    <h3>single file 업로드 해보기</h3>
+    <form action="single-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="singleFile">
+        파일 설명 : <input type="text" name="singleFileDescription">
+        <input type="submit">
+    </form>
+    <h3>multi file 업로드 해보기</h3>
+    <form action="multi-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="multiFiles" multiple> <br>
+        파일 설명 : <input type="text" name="multiFileDescription">
+        <input type="submit">
+    </form>
+    <br>
+    <h1>최대 크기 1GB</h1>
+    파일 : <input type="file" name="singleFile">
+    파일 설명 : <input type="text" name="singleFileDescription">
+    <button onclick="location.href='jjg'">제출</button>
+
+</body>
+</html>

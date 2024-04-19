@@ -1,0 +1,7 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 20GB
+  mvc:
+    static-path-pattern: /static/**

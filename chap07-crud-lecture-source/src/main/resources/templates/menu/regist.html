@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>db 추가하기</title>
+</head>
+<body>
+    <div th:include="common/header.html"></div>
+    <h3>신규 메뉴 등록</h3>
+    <form action="/menu/regist" method="post">
+        <label>메뉴 이름 : <input type="text" name="name" placeholder="이름을 입력하세요"></label> <br>
+        <label>메뉴 가격 : <input type="number" name="price" placeholder="가격을 입력하세요"></label> <br>
+        <label>카테고리 코드 : </label>
+        <select name="categoryCode" id="categoryCode"></select> <br>
+        <label>판매 상태 : </label>
+        <select name="orderableStatus">
+            <option value="Y">Y</option>
+            <option value="N">N</option>
+        </select>
+        <input type="submit" value="전송">
+    </form>
+    <script>
+        fetch("/menu/category")
+            .then(res => res.json())
+            .then(data => {
+                const $categoryCode = document.getElementById("categoryCode")
+
+                for(let index in data) {
+                    const $option = document.createElement("option");
+                    $option.value = data[index].code;
+                    $option.textContent = data[index].name;
+                    $categoryCode.appendChild($option);
+                }
+            })
+    </script>
+</body>
+</html>

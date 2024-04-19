@@ -1,0 +1,18 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>파일 업로드 결과</title>
+    </head>
+    <body>
+        <h1 th:text="${message}"></h1>
+        <div th:if="${img != null}">
+            <img th:src="${img}" alt="이미지">
+        </div>
+        <div th:else>
+            <div th:each="img : ${imgs}">
+                <img th:src="${img}" alt="이미지1">
+            </div>
+        </div>
+    </body>
+    </html>

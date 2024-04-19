@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>윤카오톡</title>
+</head>
+<body>
+<div class="container" style="text-align: center">
+    <h1>채팅하기</h1>
+    <form action="/menu/liveChatting" method="post">
+        <input type="number" name="whoareyou" placeholder="사용자 번호를 입력해주세요">
+        <input type="text" name="live-chat" placeholder="채팅 내용을 입력해주세요">
+        <button type="submit">전송</button>
+    </form>
+    <table>
+        <tr>
+            <th>사용자 번호</th>
+            <th>채팅 내용</th>
+        </tr>
+        <tr th:each="chat : ${chatList}">
+            <td th:text="${chat.whoareyou}"></td>
+            <td th:text="${chat.chat}"></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
