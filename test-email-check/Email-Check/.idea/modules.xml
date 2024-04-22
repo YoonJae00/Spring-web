@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Email-Check.iml" filepath="$PROJECT_DIR$/Email-Check.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Email-Check.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Email-Check.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Email-Check.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Email-Check.test.iml" />
+    </modules>
+  </component>
+</project>
